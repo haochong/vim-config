@@ -72,3 +72,19 @@ snippet get
 # Get Element
 snippet gett
 	getElementBy${1:Id}('${2}')${3}
+
+
+# jQuery plugin skeleton
+snippet jqplugin
+	(function($){
+	    $.fn.${1:plugin_name} = function() {
+			var settings = {};
+			return this.each(function(){
+				if(options) {
+					$.extend(settings, options);
+				}
+				${2}
+			});
+
+		};
+	})(jQuery);
